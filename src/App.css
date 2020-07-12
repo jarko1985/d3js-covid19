@@ -1,38 +1,120 @@
-.App {
-  text-align: center;
+/* Global Properties */
+body {
+  box-sizing: border-box;
+  font-size: 1.2rem;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.root {
+  width: 500px;
+  height: 500px;
+  margin: 20px;
 }
+.root svg {
+  width: 500px;
+  background: #eee;
+  overflow: visible;
+  height: 500px;
+  overflow: visible;
+  border: 1px solid #000;
+}
+.my-btn {
+  box-shadow: inset 0px 1px 0px 0px #f29c93;
+  background: linear-gradient(to bottom, #fe1a00 5%, #ce0100 100%);
+  background-color: #fe1a00;
+  border-radius: 6px;
+  border: 1px solid #d83526;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #b23e35;
+}
+.my-btn:hover {
+  background: linear-gradient(to bottom, #ce0100 5%, #fe1a00 100%);
+  background-color: #ce0100;
+}
+.my-btn {
+  position: relative;
+  top: 1px;
+}
+/* End of Global Properties */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* App.js Styling  */
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+/* Small screen */
+@media screen and (max-width: 700px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
   }
 }
+/*End of Small screen */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* End of App.js Styling  */
+
+/* BARCHART styling */
+.label {
+  font-size: 18px;
+  font-weight: 500;
+  overflow: visible;
+}
+.bar {
+  border-radius: 10px;
+}
+
+.barChartContainer {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  font-family: 'Acme', sans-serif;
 }
+/* End of BARCHART styling */
 
-.App-link {
-  color: #61dafb;
+/* MapChart styling */
+.mapChartContainer {
+  font-family: 'Acme', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+/*End of MapChart styling */
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* LineChart styling */
+.lineChartContainer {
+  font-family: 'Acme', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+/* End of LineChart styling */
+
+/* Select Styling */
+.select {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  width: 100%;
+}
+.select select {
+  font-family: 'Acme', sans-serif;
+  display: inline-block;
+  width: 50%;
+  cursor: pointer;
+  padding: 10px 15px;
+  outline: 0;
+  border: 4px solid #0039ee;
+  font-size: 18px;
+  color: #000;
+}
+/*End of Select Styling */
